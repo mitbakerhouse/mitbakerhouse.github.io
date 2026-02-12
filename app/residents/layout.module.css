@@ -1,0 +1,8 @@
+.layout {
+    display: flex;
+    background-color: none;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

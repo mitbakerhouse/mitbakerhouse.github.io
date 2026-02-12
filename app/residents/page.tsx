@@ -6,13 +6,20 @@ import Image from 'next/image';
 export default function Page() {
     return (
     <main>
-      <div className={styles.page} style={{backgroundImage: 'url("/images/bakerhouse_photos/_DSC4920.jpg")'}}>
+      <div className={styles.page} >
       <Spacer />
-      <ContentTile heading='Guest List' text={<p>Each Resident may put up to 4 students on their guest list.<br></br><a href="https://docs.google.com/forms/d/e/1FAIpQLSdP_oDWznfEFyiRa5XrOgDmX1eir5q3v_cCZXh3O_EP4iuCSg/viewform"> Go to Guest List Form</a></p>}/>
-      <ContentTile heading='RPMs' text={<p>The function of the Residential Peer Mentor (RPM) is to strengthen the support network for first-year students within Baker House. Peer Mentors are community-builders and serve as support for first-year students, helping answer questions, connect them to resources, and introduce them to the unique aspects of both Baker House and MIT. Baker House RPMs collaborate on programs focused on health and wellness, academic success, and the transition to MIT and learning about the campus, its resources, and the opportunities around Cambridge and Boston to make sure that the first-year experience is smooth, seamless, and full of opportunities to learn.</p>}/>
+      <ContentTile heading='Guest List' content={<p>Each Resident may put up to 4 students on their guest list.<br></br><a href="https://docs.google.com/forms/d/e/1FAIpQLSdP_oDWznfEFyiRa5XrOgDmX1eir5q3v_cCZXh3O_EP4iuCSg/viewform"> Go to Guest List Form</a></p>}/>
+      <ContentTile heading='RPMs' content={<p>The function of the Residential Peer Mentor (RPM) is to strengthen the support network for first-year students within Baker House. Peer Mentors are community-builders and serve as support for first-year students, helping answer questions, connect them to resources, and introduce them to the unique aspects of both Baker House and MIT. Baker House RPMs collaborate on programs focused on health and wellness, academic success, and the transition to MIT and learning about the campus, its resources, and the opportunities around Cambridge and Boston to make sure that the first-year experience is smooth, seamless, and full of opportunities to learn.</p>}/>
+      <Image
+        src="/BakerExecPosterSP25_short.svg"
+        alt="List of Baker Exec Members and their photographs."
+        width={700}
+      />
       <Image 
-        src='url("/images/past_rpms.jpg")'
+        src="/images/houseteam/past_rpms.jpg"
         alt="RPM List"
+        width={700}
+        style={{margin: 'auto'}}
       />
       <Spacer />
       </div>

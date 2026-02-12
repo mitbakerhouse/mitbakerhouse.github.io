@@ -1,10 +1,11 @@
 .header {
-    color: white;
+    color: var(--text-primary);
     /* padding: 10px; */
     width: page;
-    background-color: #005399;
-    border-color: #D3D5D4;
-    border-radius: 5 px;
+    background-color: var(--background);
+    border-color: var(--text-primary);
+    /* border-radius: 5 px; */
+    border-bottom: 5px;
 }
 .header div {
     display: flex;

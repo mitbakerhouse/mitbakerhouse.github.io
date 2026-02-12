@@ -5,11 +5,11 @@ import Image from "next/image"
 
 export interface ContentInfo {
     heading?: string;
-    text: React.ReactNode;
+    content: React.ReactNode;
     image?: string;
 }
 
-export default async function ContentTile ({heading, text, image} : ContentInfo) {
+export default async function ContentTile ({heading, content, image} : ContentInfo) {
     // const lowerName = name.toLowerCase();
     // const bioResponse = await fetch("./" + lowerName + ".txt")
     // string bio;// = bioResponse.text() // Check here first -> replace with .json?
@@ -19,7 +19,7 @@ export default async function ContentTile ({heading, text, image} : ContentInfo)
             <div>
             {image && <Image alt={"Image"} src={"/images/" + image}
             />}
-            <p>{text}</p>
+            <p>{content}</p>
             </div>
         </main>
     );

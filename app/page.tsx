@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <div className={styles.page} style={{backgroundImage: 'url("/images/bakerhouse_photos/_DSC5738.jpg")'}}>
       <Spacer />
-          <ContentTile heading="Why Baker?" text="Baker House is consistently ranked as #1 at MIT due to its strong sense of community, the stunning views of the Charles River, and its world-renowned architecture." />
+          <ContentTile heading="Why Baker?" content={<p>Baker House is consistently ranked as #1 at MIT due to its strong sense of community, the stunning views of the Charles River, and its world-renowned architecture.</p>}/>
       <Spacer h={200} />
       </div>
     </main>
