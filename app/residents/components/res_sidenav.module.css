@@ -9,5 +9,9 @@
     top: 100px;
     height: fit-content;
     min-width: 250px;
-    color: var(--background)
+    color: var(--background);
+}
+
+.res_sidenav :link {
+    color: var(--background);
 }

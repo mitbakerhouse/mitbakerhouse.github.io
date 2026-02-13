@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Page() {
     return (
     <main>
-      <div className={styles.page} style={{backgroundImage: 'url("/images/bakerhouse_photos/_DSC4920.jpg")'}}>
+      <div className={styles.page} >
       <Spacer />
       </div>
     </main>

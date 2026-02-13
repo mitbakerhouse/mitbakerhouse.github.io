@@ -1,6 +1,8 @@
 1:"$Sreact.fragment"
-2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-:HL["/_next/static/chunks/163f657a16afbe5e.css","style"]
-0:{"buildId":"MxBauj-6_Kj4NNQbZrbzW","rsc":["$","$1","c",{"children":[["$","main",null,{"children":["$","div",null,{"style":{"backgroundImage":"url(\"/images/bakerhouse_photos/_DSC4920.jpg\")"},"children":["$","div",null,{"style":{"height":500}}]}]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/163f657a16afbe5e.css","precedence":"next"}]],["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
-4:null
+2:I[22016,["/_next/static/chunks/38bcdd1758f368b4.js"],""]
+3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/7340adf74ff47ec0.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/_next/static/chunks/0a98b68bf7b1bfc9.css","style"]
+:HL["/_next/static/chunks/e32bcf8b09efe58c.css","style"]
+0:{"buildId":"nomfBcwK54D5JoNdmDeh5","rsc":["$","$1","c",{"children":[["$","main",null,{"children":["$","div",null,{"className":"page-module__EX7hoW__page","children":[["$","div",null,{"style":{"height":500}}],["$","main",null,{"className":"content_tile-module__se9yAa__content_tile","children":[["$","h2",null,{}],["$","div",null,{"children":["$undefined",["$","p",null,{"children":["$","p",null,{"children":["Looking to reserve a space in Baker? You MUST be a current Baker resident. Make sure the space is available at that time using the Google Calendar below, and follow this link to reserve:",["$","br",null,{}],["$","$L2",null,{"href":"https://docs.google.com/forms/d/e/1FAIpQLSfIugOOJ-ti3KC-iTcqPIVCCo15NeEB4UVlExJKBUqG-KN6pg/viewform","children":"Reservations Form Link"}]]}]}]]}]]}],["$","div",null,{"children":["$","iframe",null,{"src":"https://calendar.google.com/calendar/embed?src=f760905c23bc78ef72e4acb394ed5c3e9716c3bfbcdfcdaf5a38e802105cf434%40group.calendar.google.com&ctz=America%2FLos_Angeles","width":"800","height":"600"}]}]]}]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0a98b68bf7b1bfc9.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/e32bcf8b09efe58c.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

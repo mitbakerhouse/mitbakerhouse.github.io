@@ -1,0 +1,13 @@
+
+
+.page iframe {
+    border: 0;
+    width: 800;
+    height: 600;
+    border: 0;
+    /* scroll-behavior: no; */
+}
+/* .page div {
+    display: flex;
+    justify-content: center; 
+} */
