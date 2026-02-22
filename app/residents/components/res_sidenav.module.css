@@ -12,6 +12,11 @@
     color: var(--background);
 }
 
-.res_sidenav :link {
+/* .res_sidenav :link {
     color: var(--background);
+} */
+
+.res_sidenav :link, .res_sidenav :link:visited {
+    color: --var(--background);
+    text-decoration: none;
 }

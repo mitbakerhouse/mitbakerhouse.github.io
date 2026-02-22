@@ -7,9 +7,9 @@ export default function Page() {
     <main>
       <div className={styles.page} style={{backgroundImage: 'url("/images/bakerhouse_photos/_DSC4988.jpg")'}}>
       <Spacer />
-      <ContentTile content={<p>Please contact our Heads of House to schedule a tour.<br></br><a href="mailto:baker-tours@mit.edu">Email Heads of House</a></p>}/>
-      </div>
+      <ContentTile content={<p>Please contact <a href="mailto:baker-tours@mit.edu">Email Heads of House</a> to schedule a tour.</p>}/>
       <Spacer h={200}/>
+      </div>
     </main>
     );
 }

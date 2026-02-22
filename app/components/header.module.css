@@ -9,14 +9,11 @@
 }
 .header div {
     display: flex;
+    align-items: center;
 }
-.header div div {
-    height: 58px;
-    width: 174px;
-}
-.header div div img {
-  width: 100%;
-  height: 100%;
+
+.header div img {
+  height: 58px;
   object-fit: cover;
   align-items: center;
 }

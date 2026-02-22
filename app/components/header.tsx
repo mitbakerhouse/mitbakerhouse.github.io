@@ -7,14 +7,12 @@ const Header = () => {
     return (
         <main className={styles.header}>
             <div>
-                <div>
-                    <Image
-                    src="/images/baker_logo_inverted_clear.svg"
-                    alt="Baker House Logo"
-                    // width={200}
-                    // height={200}
-                    />
-                </div>
+                <Image
+                src="/images/baker_logo_inverted_clear.svg"
+                alt="Baker House Logo"
+                // width={200}
+                // height={200}
+                />
             <h1>Baker House, Baker Home</h1>
             </div>
             <TopNav />

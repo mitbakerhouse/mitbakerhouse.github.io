@@ -83,7 +83,10 @@ li {
     margin: auto;
 }
 
-
+a, a:visited {
+    color: --var(--text-primary);
+    text-decoration: none;
+}
 
 /* [data-theme='bakerhouse'] {
 } */
