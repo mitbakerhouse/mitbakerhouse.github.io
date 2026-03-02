@@ -1,6 +1,5 @@
 .header {
     color: var(--text-primary);
-    /* padding: 10px; */
     width: page;
     background-color: var(--background);
     border-color: var(--text-primary);
@@ -20,5 +19,7 @@
 
 .header h1 {
     justify-content: left;
+    font-size: 58px;
     align-items: center;
+    padding: 10px;
 }

@@ -4,7 +4,6 @@ import styles from './page.module.css'
 import Spacer from '../components/spacer'
 
 
-
 export default function Page() {
     let content;
     try {

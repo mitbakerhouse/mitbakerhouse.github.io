@@ -4,9 +4,11 @@
     padding: 14px 16px;
     color: var(--text-primary);
     border-radius: 10px;
-    margin: 20px;
+    font-size: 20px;
+    margin: 5px;
 }
 .topnav a:hover {
     color: var(--text-primary);
     background-color: #203561;
+    text-decoration: none;
 }

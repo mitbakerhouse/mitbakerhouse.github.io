@@ -1,0 +1,9 @@
+.customcarousel {
+    width: 80%;
+}
+/* .carousel ::nth-child{
+    max-width: 200px;
+} */
+.active {
+    background-color: rgba(0, 0, 0, 0.253);
+}

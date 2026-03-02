@@ -12,11 +12,13 @@ export default function ResidentLayout({
 }>) {
   return (
     <main className={styles.layout} style={{backgroundImage: 'url("/images/bakerhouse_photos/_DSC4920.jpg")'}}>
-        <div>
+        <div className={styles.layoutColumn}>
           <Spacer />
           <SideNav />
         </div>
+        <div className={styles.layoutColumn}>
         {children}
+        </div>
     </main>
 
 

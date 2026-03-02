@@ -5,4 +5,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-width: 100%;
+}
+
+.layoutcolumn {
+    display: flex;
+    justify-content: center;
 }
