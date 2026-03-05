@@ -12,3 +12,8 @@
     background-color: #203561;
     text-decoration: none;
 }
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

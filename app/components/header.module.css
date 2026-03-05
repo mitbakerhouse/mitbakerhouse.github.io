@@ -9,6 +9,7 @@
 .header div {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header div img {
