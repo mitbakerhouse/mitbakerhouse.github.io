@@ -1,14 +1,39 @@
 .layout {
-    display: flex;
     background-color: none;
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-width: 100%;
+    background-attachment: scroll;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
-.layoutcolumn {
-    display: flex;
-    justify-content: center;
+.layoutColumn {
+    min-width: 0;
+}
+
+.layoutColumn:first-child {
+    position: static;
+    top: auto;
+    align-self: start;
+    height: fit-content;
+}
+
+@media (min-width: 900px) {
+    .layout {
+        background-attachment: fixed;
+        grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .layoutColumn:first-child {
+        position: sticky;
+        top: 2rem;
+    }
 }

@@ -2,5 +2,11 @@
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
+}
+
+@media (min-width: 768px) {
+    .page {
+        background-attachment: fixed;
+    }
 }

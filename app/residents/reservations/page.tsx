@@ -1,7 +1,6 @@
 import styles from './page.module.css';
 import Spacer from '../../components/spacer';
 import ContentTile from '../../components/content_tile';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Page() {
@@ -18,8 +17,12 @@ export default function Page() {
           </p>
         }
       />
-      <div>
-        <iframe src="https://calendar.google.com/calendar/embed?src=f760905c23bc78ef72e4acb394ed5c3e9716c3bfbcdfcdaf5a38e802105cf434%40group.calendar.google.com&ctz=America%2FLos_Angeles" width="800" height="600"></iframe>
+      <div className={styles.calendarWrap}>
+        <iframe
+          className={styles.calendarFrame}
+          src="https://calendar.google.com/calendar/embed?src=f760905c23bc78ef72e4acb394ed5c3e9716c3bfbcdfcdaf5a38e802105cf434%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+          title="Baker House reservation calendar"
+        ></iframe>
       </div>
       </div>
     </main>

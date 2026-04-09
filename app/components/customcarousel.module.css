@@ -1,6 +1,16 @@
 .customcarousel {
     width: 80%;
 }
+.carouselViewport {
+    position: relative;
+    width: min(100%, 850px);
+    aspect-ratio: 8.5 / 11;
+    margin: 0 auto;
+    border: 16px solid var(--background);
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--background);
+}
 /* .carousel ::nth-child{
     max-width: 200px;
 } */

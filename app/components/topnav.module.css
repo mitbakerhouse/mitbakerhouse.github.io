@@ -1,11 +1,11 @@
 .topnav a {
-    /* background-color: rgb(52, 240, 58); */
     text-decoration: none;
-    padding: 14px 16px;
+    padding: 12px 14px;
     color: var(--text-primary);
     border-radius: 10px;
-    font-size: 20px;
-    margin: 5px;
+    font-size: clamp(0.95rem, 2.5vw, 1.25rem);
+    margin: 0;
+    text-align: center;
 }
 .topnav a:hover {
     color: var(--text-primary);
@@ -15,5 +15,7 @@
 .topnav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: inherit;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 8px 6px;
 }

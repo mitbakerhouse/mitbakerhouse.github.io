@@ -16,10 +16,19 @@ export default async function ContentTile ({heading, content, image} : ContentIn
     return (
         <main className={styles.content_tile}>
             <h2>{heading}</h2>
-            <div>
-            {image && <Image alt={"Image"} src={"/images/" + image}
-            />}
-            <p>{content}</p>
+            <div className={styles.content_body}>
+            {image && (
+                <div className={styles.image_wrap}>
+                    <Image
+                        alt={"Image"}
+                        src={"/images/" + image}
+                        fill
+                        sizes="(max-width: 768px) 90vw, 720px"
+                        className={styles.content_image}
+                    />
+                </div>
+            )}
+            <div className={styles.content_text}>{content}</div>
             </div>
         </main>
     );

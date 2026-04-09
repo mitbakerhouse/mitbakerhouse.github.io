@@ -1,13 +1,9 @@
 'use client'
-import Link from "next/link"
 import styles from "./customcarousel.module.css"
 import Image from "next/image"
-import Carousel from 'react-bootstrap/Carousel'
 import { useState } from 'react';
-import { JSX } from "react";
 import { ReactNode } from "react";
-import { Fragment } from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export interface CarouselSlide {
     image : string;
@@ -59,85 +55,88 @@ export interface CarouselSlide {
  */
 
 const CustomCarousel = ({ carouselData }: { carouselData: CarouselSlide[] }) => {
-    // Modified from react-bootstrap example carousel
-    let content, indicatorContents;
-    try{
-        content =  carouselData.map((slide, index) => {
-            if (slide.caption && index==0) {
-                return (
-                    <div className="carousel-item active">
-                        <Image src={slide.image} className="d-block w-100" alt={slide.alt}/>
-                        <div className="carousel-caption d-none d-md-block">
-                            {slide.caption}
-                        </div>
-                    </div>);
-            } else if (slide.caption) {
-                return (
-                    <div className="carousel-item">
-                        <Image src={slide.image} className="d-block w-100" alt={slide.alt}/>
-                        <div className="carousel-caption d-none d-md-block">
-                            {slide.caption}
-                        </div>
-                    </div>);
-            } else {
-                return (
-                    <div className="carousel-item">
-                        <Image src={slide.image} className="d-block w-100" alt={slide.alt}/>
-                        <div className="carousel-caption d-none d-md-block">
-                            {slide.caption}
-                        </div>
-                    </div>);
-                        } 
-                    });
-        indicatorContents = carouselData.map((slide, index) => {
-            if (slide && index==0) {
-                return (
-                    <li data-target="#carouselExampleCaptions" data-slide-to={index} className="active"></li>);
-            } else {
-                return (
-                    <li data-target="#carouselExampleCaptions" data-slide-to={index}></li>
-                );
-            }
-        });
-    } catch{
-        content = <p>Unable to render houseteam information</p>
-        console.log("error in houseteam forEach\n");
-
-    }
     const [index, setIndex] = useState(0);
 
-    const handleSelect = (selectedIndex: number) => {
-        setIndex(selectedIndex);
+    if (!carouselData || carouselData.length === 0) {
+        return <p>No carousel data available</p>;
     }
 
+    const handlePrev = () => {
+        setIndex((prevIndex) => (prevIndex - 1 + carouselData.length) % carouselData.length);
+    };
 
-  return (
-    <div className={styles.customcarousel}>
-        <div style={{width:"30%"}}>
-        </div>
-        <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
-            <ol className="carousel-indicators">
-                { indicatorContents }
-            </ol>
-            <div className="carousel-inner">
-                {content}
+    const handleNext = () => {
+        setIndex((prevIndex) => (prevIndex + 1) % carouselData.length);
+    };
+
+    const handleIndicatorClick = (selectedIndex: number) => {
+        setIndex(selectedIndex);
+    };
+
+    const content = carouselData.map((slide, slideIndex) => (
+        <div
+            key={slideIndex}
+            className={`carousel-item ${slideIndex === index ? 'active' : ''}`}
+            style={{ display: slideIndex === index ? 'block' : 'none' }}
+        >
+            <div className={styles.carouselViewport}>
+                <Image 
+                    src={slide.image} 
+                    alt={slide.alt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    priority={slideIndex === 0}
+                />
             </div>
-            <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-            </a>
+            {slide.caption && (
+                <div className="carousel-caption d-none d-md-block" style={{ background: 'rgba(0, 0, 0, 0.653)'}}>
+                    {slide.caption}
+                </div>
+            )}
         </div>
-        <div style={{width:"30%"}}>
+    ));
 
+    const indicatorContents = carouselData.map((_, slideIndex) => (
+        <li
+            key={slideIndex}
+            className={slideIndex === index ? 'active' : ''}
+            onClick={() => handleIndicatorClick(slideIndex)}
+            style={{ cursor: 'pointer' }}
+        />
+    ));
+
+
+    return (
+        <div className={styles.customcarousel}>
+            <div style={{ width: "30%" }}></div>
+            <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    {indicatorContents}
+                </div>
+                <div className="carousel-inner">
+                    {content}
+                </div>
+                <button 
+                    className="carousel-control-prev" 
+                    type="button" 
+                    onClick={handlePrev}
+                    aria-label="Previous slide"
+                >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button 
+                    className="carousel-control-next" 
+                    type="button" 
+                    onClick={handleNext}
+                    aria-label="Next slide"
+                >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div style={{ width: "30%" }}></div>
         </div>
-    </div>
     );
 }
 
 export default CustomCarousel;
-
 
