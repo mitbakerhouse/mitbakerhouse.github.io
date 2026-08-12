@@ -1,7 +1,7 @@
 [
     {
         "name" : "John & Malvina",
-        "bio" : "Introducing the Heads of House (HoH) for Baker House, Malvina Lampietti and Prof. John Fernandez ('85) and their children Lorenzo and Vita. John is a professor in Course 4 (Architecture) and Director of ESI – the Environmental Solutions Initiative. Malvina is a principal of Lampietti Fernández Architects, which she co-founded with John in 1997. Malvina is an avid tennis player and John is a classical pianist. Our vizsla, Louie, loves to greet students. We look forward to meeting those of you who are new to Baker and sharing an excellent upcoming academic year!",
+        "bio" : "Introducing the Heads of House (HoH) for Baker House, Malvina Lampietti and Prof. John Fernandez ('85) and their children Lorenzo and Vita. John is a professor in Course 4 (Architecture), Co-founder of MIT Environmental Research + Action (ERA) and Faculty director of the Undergraduate Advising Center (UAC). Malvina is a principal of Lampietti Fernández Architects, which she co-founded with John in 1997. Malvina is an avid tennis player and John is a classical pianist. Our vizsla, Louie, loves to greet students. We look forward to meeting those of you who are new to Baker and sharing an excellent upcoming academic year!",
         "floor" : "Heads of House",
         "image" : "HoHphoto.jpeg"
 
@@ -13,10 +13,10 @@
         "image" : "rachael.jpg"
     },
     {
-        "name" : "Natalie",
-        "bio" : "Hi! My name is Natalie Barnouw - I'm from Los Angeles, CA. I'm a current MEng student who majored in Computational Biology (6-7) with a minor in Neuroscience (9) during my undergrad here at MIT. Outside of the classroom, I'm on the women's soccer team. I love crocheting, rock climbing, baking, hiking, weightlifting, and playing card games with my friends!",
+        "name" : "Paige",
+        "bio" : "Hey! I'm Paige and I'm a 4th year PhD candidate in Mechanical Engineering studying precision pointing for satellite laser communications. I was an undergrad at MIT class of 2023 in course 2, and I lived on Baker 1W as a first year in 2019, so I'm thrilled to return to Baker House (Baker Home). I'm a triathlete so I spend a lot of time swimming, biking, and running, and I also love to bake (especially Milk Bar desserts!), rock climb, and watch women's sports. I grew up in the suburbs of Chicago, and I have 2 big brothers!",
         "floor" : "One West",
-        "image" : "natalie.JPG"
+        "image" : "paige.jpeg"
     },
     {
         "name" : "Jenny and Judah",
@@ -25,10 +25,10 @@
         "image" : "jenny_judah.png"
     },
     {
-        "name" : "Felipe",
-        "bio" : "Hi! I’m a PhD student in the Department of Linguistics and Philosophy. I grew up in Argentina and earned my B.A. in Philosophy from Princeton University. Before starting my PhD, I worked at the Princeton University Investment Company for two years. In my free time, I enjoy running, especially with the Boston Hares!",
+        "name" : "Lucas and Charlotte",
+        "bio" : "I (Lucas) am a PhD student studying experimental nuclear and particle physics. I grew up in Washington State and did my undergrad in Seattle. I love the outdoors—morning sanity runs, afternoon sailing on the Charles, and weekends hiking, trail running, and backcountry skiing in the White Mountains (or back home in Washington when I get the chance). Otherwise, I enjoy cooking and hardware/electrical projects. And I’m Charlotte, and I just wrapped up my PhD in mechanical engineering at MIT! I’m originally from Atlanta but have been in Cambridge since undergrad at MIT. I love being outside, building things, and challenging myself. You can often find me running bridge loops, cross country skiing on Briggs, fastpacking in the Whites, repairing my bikes, machining, or baking!",
         "floor" : "Two West",
-        "image" : "felipe_photo.jpeg"
+        "image" : "lucas_charlotte.png"
     },
     {
         "name" : "Anique",
@@ -55,10 +55,10 @@
         "image" : "Elijah.jpg"
     },
     {
-        "name" : "Juan",
-        "bio" : "Hello! I’m Juan. I am currently pursuing an MEng in Computer Science and Electrical Engineering. As a member of the Aerospace Controls Laboratory, I study path planning and perception for autonomous vehicles. I grew up in Valencia, Venezuela, but moved to Miami, FL, during my first year of high school. I lived there until I started my undergrad at MIT. During my free time, I enjoy working out, going to the beach, reading, and watching baseball. I look forward to meeting you all!",
+        "name" : "Evan and Marlene",
+        "bio" : "Hi, I’m Evan! I’m a PhD student in the AeroAstro department and I study the climate and air quality impacts of aviation. I grew up in Calgary and did my undergraduate degree in Ottawa before coming to MIT. I love playing all sports, especially soccer, listening to music, and playing guitar. And I, Marlene, am also a PhD student in AeroAstro and study sensor-based approaches to identify and avoid contrails. I am originally from Germany where I studied Aerospace Engineering at the University of Stuttgart before coming to MIT. In my free time I love to run, play guitar, and cook. We look forward to meeting you all!",
         "floor" : "Five West",
-        "image" : "Juan.jpeg"
+        "image" : "evan_marlene.png"
     },
     {
         "name" : "Nancy",
