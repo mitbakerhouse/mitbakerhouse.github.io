@@ -10,6 +10,9 @@ const Header = () => {
                 <Image
                 src="/images/baker_logo_inverted_clear.svg"
                 alt="Baker House Logo"
+                width={58}
+                height={58}
+                priority
                 />
             <h1>Baker House, Baker Home</h1>
             </div>

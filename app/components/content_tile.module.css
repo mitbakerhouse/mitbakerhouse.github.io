@@ -1,7 +1,7 @@
 .content_tile {
     width: min(100%, 900px);
-    margin: 16px auto;
-    padding: clamp(18px, 4vw, 32px);
+    margin: clamp(8px, 2vw, 16px) auto;
+    padding: clamp(16px, 4vw, 32px);
     background-color: var(--background);
     color: var(--text-primary);
     text-align: left;
@@ -9,11 +9,13 @@
     border-radius: 20px;
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: clamp(1rem, 2.2vw, 20px);
+    box-sizing: border-box;
 }
 
 .content_tile h2 {
     text-align: center;
     margin-top: 0;
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
 }
 
 .content_body {
@@ -46,9 +48,6 @@
     text-decoration: underline;
     padding: 0;
     margin: 0;
-}
-.content_tile a:hover {
-    background-color: None;
 }
 
 .content_text {

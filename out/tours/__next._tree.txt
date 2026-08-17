@@ -1,7 +1,4 @@
-:HL["/_next/static/chunks/d20e03f206bac185.css","style"]
+:HL["/_next/static/chunks/4619fd3a7c89cbd4.css","style"]
 :HL["/_next/static/media/173b4e1ecbfe6c3b-s.p.bb4389f3.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/9ce9a4a38ba25966-s.p.27ba0bad.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/chunks/b057d58ab34c9cc2.css","style"]
-:HL["/_next/static/chunks/1d7528787f8f6ea7.css","style"]
-:HL["https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css","style",{"crossOrigin":"anonymous","integrity":"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"}]
-0:{"buildId":"tTcDmAOedcSLlGKxCCmaH","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"tours","paramType":null,"paramKey":"tours","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/_next/static/chunks/d050ead70d174c98.css","style"]
+0:{"buildId":"D79avqkGnCJbSGaiLkqQ2","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"tours","paramType":null,"paramKey":"tours","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -1,5 +1,4 @@
 import styles from './page.module.css';
-import Spacer from '../../components/spacer';
 import ContentTile from '../../components/content_tile';
 import Link from 'next/link';
 
@@ -7,7 +6,6 @@ export default function Page() {
     return (
     <main>
       <div className={styles.page}>
-      <Spacer />
       <ContentTile 
         content= {
           <p>

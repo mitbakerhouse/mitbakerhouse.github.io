@@ -1,75 +1,74 @@
 [
     {
-        "name" : "John & Malvina",
-        "bio" : "Introducing the Heads of House (HoH) for Baker House, Malvina Lampietti and Prof. John Fernandez ('85) and their children Lorenzo and Vita. John is a professor in Course 4 (Architecture), Co-founder of MIT Environmental Research + Action (ERA) and Faculty director of the Undergraduate Advising Center (UAC). Malvina is a principal of Lampietti Fernández Architects, which she co-founded with John in 1997. Malvina is an avid tennis player and John is a classical pianist. Our vizsla, Louie, loves to greet students. We look forward to meeting those of you who are new to Baker and sharing an excellent upcoming academic year!",
-        "floor" : "Heads of House",
-        "image" : "HoHphoto.jpeg"
-
+        "name": "John & Malvina",
+        "bio": "Introducing the Heads of House (HoH) for Baker House, Malvina Lampietti and Prof. John Fernandez ('85) and their children Lorenzo and Vita. John is a professor in Course 4 (Architecture), Co-founder of MIT Environmental Research + Action (ERA) and Faculty director of the Undergraduate Advising Center (UAC). Malvina is a principal of Lampietti Fern\u00e1ndez Architects, which she co-founded with John in 1997. Malvina is an avid tennis player and John is a classical pianist. Our vizsla, Louie, loves to greet students. We look forward to meeting those of you who are new to Baker and sharing an excellent upcoming academic year!",
+        "floor": "Heads of House",
+        "image": "HoHphoto.jpeg"
     },
     {
-        "name" : "Rachael",
-        "bio" : "Hi, I'm Rachael Beaumont, the Area Director to Baker House! I was born and raised in Lawrence, KS where I got my undergraduate degree in Theater Education at the University of Kansas before moving to Lincoln, NE to get my Masters in Student Affairs!  I've spent some time in the Midwest working before coming to MIT where I'm excited to share in the experiences and the traditions with every student here!  I'm a regular at the gym so if you see me say hi! I love trying out new recipes, exploring the city, watching baking shows, and can never go wrong with a good board game!  I hope you'll swing by for a chat or a cup of coffee!",
-        "floor" : "Area Director",
-        "image" : "rachael.jpg"
+        "name": "Rachael",
+        "bio": "Hi, I'm Rachael Beaumont, the Area Director to Baker House! I was born and raised in Lawrence, KS where I got my undergraduate degree in Theater Education at the University of Kansas before moving to Lincoln, NE to get my Masters in Student Affairs!  I've spent some time in the Midwest working before coming to MIT where I'm excited to share in the experiences and the traditions with every student here!  I'm a regular at the gym so if you see me say hi! I love trying out new recipes, exploring the city, watching baking shows, and can never go wrong with a good board game!  I hope you'll swing by for a chat or a cup of coffee!",
+        "floor": "Area Director",
+        "image": "rachael.jpg"
     },
     {
-        "name" : "Paige",
-        "bio" : "Hey! I'm Paige and I'm a 4th year PhD candidate in Mechanical Engineering studying precision pointing for satellite laser communications. I was an undergrad at MIT class of 2023 in course 2, and I lived on Baker 1W as a first year in 2019, so I'm thrilled to return to Baker House (Baker Home). I'm a triathlete so I spend a lot of time swimming, biking, and running, and I also love to bake (especially Milk Bar desserts!), rock climb, and watch women's sports. I grew up in the suburbs of Chicago, and I have 2 big brothers!",
-        "floor" : "One West",
-        "image" : "paige.jpeg"
+        "name": "Paige",
+        "bio": "Hey! I'm Paige and I'm a 4th year PhD candidate in Mechanical Engineering studying precision pointing for satellite laser communications. I was an undergrad at MIT class of 2023 in course 2, and I lived on Baker 1W as a first year in 2019, so I'm thrilled to return to Baker House (Baker Home). I'm a triathlete so I spend a lot of time swimming, biking, and running, and I also love to bake (especially Milk Bar desserts!), rock climb, and watch women's sports. I grew up in the suburbs of Chicago, and I have 2 big brothers!",
+        "floor": "One West",
+        "image": "paige.jpeg"
     },
     {
-        "name" : "Jenny and Judah",
-        "bio" : "Hi! I’m Jenny, and I am a PhD student in the Economics department, interested in topics of labor, public, and behavioral economics. I grew up in Baton Rouge, LA, went to college in Chicago, and worked in San Francisco for several years before coming to MIT for grad school! I love hot chocolate, being outdoors, walking and biking around Cambridge, playing competitive ultimate frisbee, and trying new arts and crafts. And I’m Judah! I am a software engineer for a start up in the Bay area meaning I work remotely full time! I grew up in New York City before going to school in Chicago where I met Jenny. I enjoy biking around the city of Cambridge, finding new spots in the city where I can work, trying out new recipes and playing ultimate frisbee! Why Baker First West is the best: One WEST is obviously the BEST because we have that first-year excited energy, enthusiasm, and passion!",
-        "floor" : "One West",
-        "image" : "jenny_judah.png"
+        "name": "Jenny and Judah",
+        "bio": "Hi! I\u2019m Jenny, and I am a PhD student in the Economics department, interested in topics of labor, public, and behavioral economics. I grew up in Baton Rouge, LA, went to college in Chicago, and worked in San Francisco for several years before coming to MIT for grad school! I love hot chocolate, being outdoors, walking and biking around Cambridge, playing competitive ultimate frisbee, and trying new arts and crafts. And I\u2019m Judah! I am a software engineer for a start up in the Bay area meaning I work remotely full time! I grew up in New York City before going to school in Chicago where I met Jenny. I enjoy biking around the city of Cambridge, finding new spots in the city where I can work, trying out new recipes and playing ultimate frisbee! Why Baker First West is the best: One WEST is obviously the BEST because we have that first-year excited energy, enthusiasm, and passion!",
+        "floor": "One West",
+        "image": "jenny_judah.png"
     },
     {
-        "name" : "Lucas and Charlotte",
-        "bio" : "I (Lucas) am a PhD student studying experimental nuclear and particle physics. I grew up in Washington State and did my undergrad in Seattle. I love the outdoors—morning sanity runs, afternoon sailing on the Charles, and weekends hiking, trail running, and backcountry skiing in the White Mountains (or back home in Washington when I get the chance). Otherwise, I enjoy cooking and hardware/electrical projects. And I’m Charlotte, and I just wrapped up my PhD in mechanical engineering at MIT! I’m originally from Atlanta but have been in Cambridge since undergrad at MIT. I love being outside, building things, and challenging myself. You can often find me running bridge loops, cross country skiing on Briggs, fastpacking in the Whites, repairing my bikes, machining, or baking!",
-        "floor" : "Two West",
-        "image" : "lucas_charlotte.png"
+        "name": "Lucas and Charlotte",
+        "bio": "I (Lucas) am a PhD student studying experimental nuclear and particle physics. I grew up in Washington State and did my undergrad in Seattle. I love the outdoors\u2014morning sanity runs, afternoon sailing on the Charles, and weekends hiking, trail running, and backcountry skiing in the White Mountains (or back home in Washington when I get the chance). Otherwise, I enjoy cooking and hardware/electrical projects.\n\nAnd I\u2019m Charlotte, and I just wrapped up my PhD in mechanical engineering at MIT! I\u2019m originally from Atlanta but have been in Cambridge since undergrad at MIT. I love being outside, building things, and challenging myself. You can often find me running bridge loops, cross country skiing on Briggs, fastpacking in the Whites, repairing my bikes, machining, or baking!",
+        "floor": "Two West",
+        "image": "lucas_charlotte.jpg"
     },
     {
-        "name" : "Anique",
-        "bio" : "Hi! I’m Anique, an NSF-GRF PhD candidate in Brain and Cognitive Sciences. In the Tsai Lab, I study clinical and molecular effects of oscillations on Parkinson’s disease. Before MIT, I worked at the NIH on neural virology and sleep pharmacology. Growing up on St. Kitts, I treasured our pet birds, dogs, cats, and monkey. I also love music, weightlifting, yoga, and costume design -so if a creative study break sounds fun, let’s make something together! I’m honored to be part of a team that values your authenticity and supports your thriving. Why Baker First/Second East: We host great study breaks, listen with care, and are glad you’re here.",
-        "floor" : "One and Two East",
-        "image" : "anique.jpg"
+        "name": "Anique",
+        "bio": "Hi! I\u2019m Anique, an NSF-GRF PhD candidate in Brain and Cognitive Sciences. In the Tsai Lab, I study clinical and molecular effects of oscillations on Parkinson\u2019s disease. Before MIT, I worked at the NIH on neural virology and sleep pharmacology. Growing up on St. Kitts, I treasured our pet birds, dogs, cats, and monkey. I also love music, weightlifting, yoga, and costume design -so if a creative study break sounds fun, let\u2019s make something together! I\u2019m honored to be part of a team that values your authenticity and supports your thriving. Why Baker First/Second East: We host great study breaks, listen with care, and are glad you\u2019re here.",
+        "floor": "One and Two East",
+        "image": "anique.jpg"
     },
     {
-        "name" : "Haley",
-        "bio" : "Hi! I am a PhD candidate in Course 2 (MechE) and my research is in medical device development for low-resource settings. I am from Titusville, FL and completed my undergrad in Course 20 (BE) at MIT where I was also on the rowing team - Let's Go Tech! When not in lab, or running along the Charles, I enjoy rock climbing, reading, playing guitar, making things, and going on adventures!",
-        "floor" : "Three West",
-        "image" : "Haley.jpeg"
+        "name": "Haley",
+        "bio": "Hi! I am a PhD candidate in Course 2 (MechE) and my research is in medical device development for low-resource settings. I am from Titusville, FL and completed my undergrad in Course 20 (BE) at MIT where I was also on the rowing team - Let's Go Tech! When not in lab, or running along the Charles, I enjoy rock climbing, reading, playing guitar, making things, and going on adventures!",
+        "floor": "Three West",
+        "image": "Haley.jpeg"
     },
     {
-        "name" : "Angel",
-        "bio" : "Hi! I’m a MD Candidate in the Harvard Medical School-MIT HST program with research and clinical interests in neurorestorative translational and systems neuroscience. I grew up in Maryland and did my undergraduate degrees in (you guessed it!) systems neuroscience at Johns Hopkins University. Before coming to MIT/Harvard, I spent a year and a half working on translational neurosurgery (a bit of a theme) at Johns Hopkins Medical School while simultaneously perfecting my Pilates routine. I love low impact workouts, talking about brain fun facts, exploring Boston, multi-tasking watching cartoons and studying, and all things self-care (I have way too many face masks)! I am SO excited to meet you all :)))!!!",
-        "floor" : "Four West",
-        "image" : "angel.jpg"
+        "name": "Angel",
+        "bio": "Hi! I\u2019m a MD Candidate in the Harvard Medical School-MIT HST program with research and clinical interests in neurorestorative translational and systems neuroscience. I grew up in Maryland and did my undergraduate degrees in (you guessed it!) systems neuroscience at Johns Hopkins University. Before coming to MIT/Harvard, I spent a year and a half working on translational neurosurgery (a bit of a theme) at Johns Hopkins Medical School while simultaneously perfecting my Pilates routine. I love low impact workouts, talking about brain fun facts, exploring Boston, multi-tasking watching cartoons and studying, and all things self-care (I have way too many face masks)! I am SO excited to meet you all :)))!!!",
+        "floor": "Four West",
+        "image": "angel.jpg"
     },
     {
-        "name" : "Elijah",
-        "bio" : "Hi! I'm Elijah, and I'm a PhD student in Civil and Environmental Engineering, studying methane emission mitigation for climate change. I grew up in Connecticut, studied chemical engineering at Tufts, and worked at Beyond Meat in LA for a while before coming to MIT.   I love reading, hiking, surfing, playing soccer, and making things! Why Baker Third/Fourth East is the best: Because we are committed to building a vibrant, welcoming community, and as a past GRA once said, \"We have all of the views of the 6th floor without any of the altitude sickness!\"",
-        "floor" : "Three and Four East",
-        "image" : "Elijah.jpg"
+        "name": "Elijah",
+        "bio": "Hi! I'm Elijah, and I'm a PhD student in Civil and Environmental Engineering, studying methane emission mitigation for climate change. I grew up in Connecticut, studied chemical engineering at Tufts, and worked at Beyond Meat in LA for a while before coming to MIT.\u00a0\u00a0 I love reading, hiking, surfing, playing soccer, and making things!\u00a0Why Baker Third/Fourth East is the best: Because we are committed\u00a0to building a vibrant, welcoming community, and as a past GRA once said, \"We have all of the views of the 6th floor without any of the altitude sickness!\"",
+        "floor": "Three and Four East",
+        "image": "Elijah.jpg"
     },
     {
-        "name" : "Evan and Marlene",
-        "bio" : "Hi, I’m Evan! I’m a PhD student in the AeroAstro department and I study the climate and air quality impacts of aviation. I grew up in Calgary and did my undergraduate degree in Ottawa before coming to MIT. I love playing all sports, especially soccer, listening to music, and playing guitar. And I, Marlene, am also a PhD student in AeroAstro and study sensor-based approaches to identify and avoid contrails. I am originally from Germany where I studied Aerospace Engineering at the University of Stuttgart before coming to MIT. In my free time I love to run, play guitar, and cook. We look forward to meeting you all!",
-        "floor" : "Five West",
-        "image" : "evan_marlene.png"
+        "name": "Evan and Marlene",
+        "bio": "Hi, I\u2019m Evan! I\u2019m a PhD student in the AeroAstro department and I study the climate and air quality impacts of aviation. I grew up in Calgary and did my undergraduate degree in Ottawa before coming to MIT. I love playing all sports, especially soccer, listening to music, and playing guitar. And I, Marlene, am also a PhD student in AeroAstro and study sensor-based approaches to identify and avoid contrails. I am originally from Germany where I studied Aerospace Engineering at the University of Stuttgart before coming to MIT. In my free time I love to run, play guitar, and cook. We look forward to meeting you all!",
+        "floor": "Five West",
+        "image": "evan_marlene.png"
     },
     {
-        "name" : "Nancy",
-        "bio" : "Hi! I’m a PhD student in Economics, and I do work in labor, political, and behavioral economics (come talk to me about all things econ!). I grew up in Hershey, PA and did my undergrad at MIT (2019, 10B and 14-2), where I lived in French House. Before returning to MIT for grad school, I spent two years working. In my free time, I enjoy biking at a leisurely pace, trying hot sauces, cooking, playing violin, and listening to pop trash. I can’t wait to meet you! ^.^ Why Baker Sixth West is the best: 6 West is the best because we make it a warm and welcoming home for everyone.",
-        "floor" : "Six West",
-        "image" : "nancy.jpg"
+        "name": "Nancy",
+        "bio": "Hi! I\u2019m a PhD student in Economics, and I do work in labor, political, and behavioral economics (come talk to me about all things econ!). I grew up in Hershey, PA and did my undergrad at MIT (2019, 10B and 14-2), where I lived in French House. Before returning to MIT for grad school, I spent two years working. In my free time, I enjoy biking at a leisurely pace, trying hot sauces, cooking, playing violin, and listening to pop trash. I can\u2019t wait to meet you! ^.^ Why Baker Sixth West is the best: 6 West is the best because we make it a warm and welcoming home for everyone.",
+        "floor": "Six West",
+        "image": "nancy.jpg"
     },
     {
-        "name" : "Cat and Nick",
-        "bio" : "Hi, we're Cat and Nick! We are both from New Jersey and earned our Mechanical and Chemical engineering degrees respectively at Rutgers University. I, Cat, am a PhD student in the AeroAstro department where I research electrospray thruster systems. Outside of the lab, I love hiking, weightlifting, baking, and crocheting. And I, Nick, am an aCTivate associate at Bristol Meyers Squibb where I work on manufacturing cell therapy treatments. In my free time, I love climbing, hiking, and learning about history. We're so excited to meet you all! Why Baker Fifth/Sixth East is the best: Because all good things come in pairs!",
-        "floor" : "Five and Six East",
-        "image" : "cat_nick.jpeg"
+        "name": "Cat and Nick",
+        "bio": "Hi, we're Cat and Nick! We are both from New Jersey and earned our Mechanical and Chemical engineering degrees respectively at Rutgers University. I, Cat, am a PhD student in the AeroAstro department where I research electrospray thruster systems. Outside of the lab, I love hiking, weightlifting, baking, and crocheting. And I, Nick, am an aCTivate associate at Bristol Meyers Squibb where I work on manufacturing cell therapy treatments. In my free time, I love climbing, hiking, and learning about history. We're so excited to meet you all! Why Baker Fifth/Sixth East is the best: Because all good things come in pairs!",
+        "floor": "Five and Six East",
+        "image": "cat_nick.jpeg"
     }
 ]

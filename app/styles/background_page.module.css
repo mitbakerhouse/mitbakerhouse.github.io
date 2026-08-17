@@ -2,11 +2,15 @@
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: scroll;
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 3vw, 1.25rem) clamp(2rem, 5vw, 3rem);
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
     .page {
         background-attachment: fixed;
+        padding-top: clamp(1.5rem, 4vw, 2.5rem);
     }
 }

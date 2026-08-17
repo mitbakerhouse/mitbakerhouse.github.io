@@ -1,19 +1,115 @@
 .customcarousel {
-    width: 80%;
+    width: min(100%, 720px);
+    margin: 0 auto;
+    padding: 0 clamp(0.25rem, 2vw, 1rem);
 }
+
+.carousel {
+    position: relative;
+}
+
+.carouselInner {
+    position: relative;
+    width: 100%;
+}
+
+.carouselItem {
+    width: 100%;
+}
+
 .carouselViewport {
     position: relative;
-    width: min(100%, 850px);
-    aspect-ratio: 8.5 / 11;
+    width: 100%;
+    aspect-ratio: 9 / 16;
     margin: 0 auto;
-    border: 16px solid var(--background);
+    border: clamp(8px, 2vw, 16px) solid var(--background);
     overflow: hidden;
     border-radius: 12px;
     background: var(--background);
 }
-/* .carousel ::nth-child{
-    max-width: 200px;
-} */
-.active {
-    background-color: rgba(0, 0, 0, 0.253);
+
+.carouselIndicators {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.indicatorActive {
+    background: var(--text-primary);
+}
+
+.controlPrev,
+.controlNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(36px, 10vw, 44px);
+    height: clamp(36px, 10vw, 44px);
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    cursor: pointer;
+}
+
+.controlPrev {
+    left: clamp(4px, 1.5vw, 8px);
+}
+
+.controlNext {
+    right: clamp(4px, 1.5vw, 8px);
+}
+
+.controlPrev:hover,
+.controlNext:hover {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.controlIcon {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.controlIconPrev {
+    margin-left: -3px;
+    border-width: 8px 12px 8px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.controlIconNext {
+    margin-right: -3px;
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent white;
+}
+
+.caption {
+    text-align: center;
+    padding: 0.65rem 0.85rem;
+    margin-top: 0.5rem;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 8px;
+    color: white;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }

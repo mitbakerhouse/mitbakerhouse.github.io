@@ -19,8 +19,13 @@ export default async function GraTile ({name, bio, floor, image} : GraInfo) {
             <h2>{floor} - {name}</h2>
             <div>
             <Image alt={name + " Image"} src={"/images/houseteam/" + image}
+            width={400}
+            height={400}
+            style={{ width: 'auto', height: 'auto', maxWidth: '30%' }}
             />
-            <p>{bio}</p>
+            <p>{bio.split('\n\n').map((paragraph, i) => (
+                <span key={i}>{i > 0 && <><br /><br /></>}{paragraph}</span>
+            ))}</p>
             </div>
         </main>
     );

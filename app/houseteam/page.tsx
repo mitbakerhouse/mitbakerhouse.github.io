@@ -1,7 +1,6 @@
 import GraTile from "../components/gra_tile";
 import houseteam from "../houseteam/houseteam.json";
-import styles from './page.module.css'
-import Spacer from '../components/spacer'
+import bgStyles from '../styles/background_page.module.css'
 
 
 export default function Page() {
@@ -18,10 +17,8 @@ export default function Page() {
     }
     return (
     <main>
-      <div className={styles.page} style={{backgroundImage: 'url("/images/bakerhouse_photos/_DSC4740.jpg")'}}>
-      <Spacer />
+      <div className={bgStyles.page} style={{backgroundImage: 'url("/images/bakerhouse_photos/_DSC4740.jpg")'}}>
       {content}
-      <Spacer h={200} />
       </div>
     </main>
     );

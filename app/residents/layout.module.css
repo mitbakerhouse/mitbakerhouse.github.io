@@ -1,16 +1,17 @@
 .layout {
-    background-color: none;
+    background-color: transparent;
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: scroll;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
     align-items: start;
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: clamp(0.75rem, 2vw, 1rem);
 }
 
 .layoutColumn {
@@ -29,11 +30,11 @@
         background-attachment: fixed;
         grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
         gap: 2rem;
-        padding: 2rem;
+        padding: clamp(1rem, 2vw, 2rem);
     }
 
     .layoutColumn:first-child {
         position: sticky;
-        top: 2rem;
+        top: 1rem;
     }
 }

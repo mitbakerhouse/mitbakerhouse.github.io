@@ -3,4 +3,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
 }

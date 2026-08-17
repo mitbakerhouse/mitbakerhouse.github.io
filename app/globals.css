@@ -16,6 +16,7 @@ html, body {
     background-color: var(--background);
     overflow-x: hidden;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -38,7 +39,6 @@ html, body {
 }
 
 button {
-    /* background-color: rgb(52, 240, 58); */
     text-decoration: none;
     padding: 14px 16px;
     color: var(--text-accent);
@@ -72,22 +72,17 @@ button {
 }
 
 body {
-    font-family: "Assistant", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.5;
 }
 
 li {
     text-align: left;
-    width: 60%;
+    width: min(100%, 60%);
     margin: auto;
 }
 
 a, a:visited {
-    color: --var(--text-primary);
+    color: var(--text-primary);
     text-decoration: none;
 }
-
-/* [data-theme='bakerhouse'] {
-} */

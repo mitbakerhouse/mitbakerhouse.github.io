@@ -1,20 +1,19 @@
 .page {
-    min-height: 100vh;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .imageWrap {
     width: min(100%, 700px);
     margin: 0 auto;
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
 }
 
 .posterImage {
     width: 100%;
     height: auto;
-}
-
-.page > div {
-    display: flex;
-    justify-content: center;
-    width: 100%;
 }

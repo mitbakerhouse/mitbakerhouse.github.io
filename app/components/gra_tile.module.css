@@ -1,44 +1,62 @@
 .gra_tile {
-    width: 80%;
-    /* height: 400px; */
-    margin: 10px 10%;
-    padding: 30px;
+    width: min(92%, 900px);
+    margin: clamp(8px, 2vw, 12px) auto;
+    padding: clamp(16px, 4vw, 30px);
     background-color: var(--background);
     color: var(--text-primary);
     text-align: left;
     border-radius: 20px;
     box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 20px);
 }
+
 .gra_tile div {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
 }
+
 .gra_tile div img {
-    max-width: 30%;
+    max-width: min(75%, 280px);
+    width: auto;
     height: auto;
-    /* margin: 30px; */
 }
 
 .gra_tile div img:hover {
     opacity: 50%;
     transition-duration: .2s;
 }
+
 .gra_tile a {
     text-decoration: underline;
     padding: 0;
     margin: 0;
 }
-.gra_tile a:hover {
-    background-color: None;
+
+.gra_tile h2 {
+    text-align: center;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
 }
 
-/* .gra_tile > * {
-    margin: 30px 30px;
-} */
-.gra_tile h2 {
-    text-align:center;
-}
 .gra_tile p {
-    margin: 0 30px 0 10px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .gra_tile div {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .gra_tile div img {
+        max-width: 30%;
+        flex-shrink: 0;
+    }
+
+    .gra_tile p {
+        margin: 0 0 0 10px;
+    }
 }
