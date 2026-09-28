@@ -1,0 +1,50 @@
+---
+const { pathname } = Astro.url;
+
+const links = [
+  { href: "/residents", label: "Residents Home" },
+  {
+    href: "https://docs.google.com/document/d/e/2PACX-1vTYU9DSVl3NxHC82LnRDSAhYWOqHsAk3ZBiOtV9CZ3iyLQqaDw6BlYw_TBx_l9DagXrratMLVsKvxb1/pub",
+    label: "Welcome Packet",
+    external: true,
+  },
+  {
+    href: "https://drive.google.com/file/d/1hp8wgZwqHgtnMV1D0MXcDi70KAY2a8qR/view",
+    label: "Rooming Policies",
+    external: true,
+  },
+  {
+    href: "https://docs.google.com/document/d/e/2PACX-1vSeF63qsFUldkdLWg8iM6NimiC2tTj9qX3zUpQm5nTLdL3GdQYF15rGDLtAiPDFwRXtSzsM7rrylnik/pub",
+    label: "Desk Policies",
+    external: true,
+  },
+  { href: "/residents/events", label: "Events Page" },
+  { href: "/residents/reservations", label: "Reservations" },
+];
+
+const isActive = (href: string) =>
+  href === pathname || href === `${pathname}/` || pathname.startsWith(`${href}/`);
+---
+
+<nav class="glass rounded-lg p-4 sticky top-[5rem] intersect:animate-fadeRight opacity-0">
+  <h3 class="h5 mb-3">Quick Links</h3>
+  <ul class="list-none m-0 space-y-2">
+    {
+      links.map((link) => (
+        <li class="m-0">
+          <a
+            href={link.href}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
+            class={`block no-underline hover:underline ${
+              !link.external && isActive(link.href) ? "font-bold" : ""
+            }`}
+          >
+            {link.label}
+            {link.external && <span aria-hidden="true"> ↗</span>}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

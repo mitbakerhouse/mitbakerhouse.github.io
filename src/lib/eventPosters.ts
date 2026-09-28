@@ -1,0 +1,49 @@
+export type EventPoster = {
+  image: string;
+  caption: string;
+  alt: string;
+};
+
+/** Past event posters (same set as mitbakerhouse.github.io residents/events). */
+export const eventPosters: EventPoster[] = [
+  {
+    image: "/images/eventposters/minigolf_winners.jpg",
+    caption: "Minigolf Winners",
+    alt: "The winners of the annual Minigolf Tournament",
+  },
+  {
+    image: "/images/eventposters/minigolf.jpg",
+    caption: "Minigolf Study Break",
+    alt: "",
+  },
+  {
+    image: "/images/eventposters/mocktails.jpg",
+    caption: "Mocktails on the Roof!",
+    alt: "Poster for roof event, mocktail making to teach alcohol awareness and best practices.",
+  },
+  {
+    image: "/images/eventposters/plants.jpg",
+    caption: "",
+    alt: "Succulents and smoothies study break",
+  },
+  {
+    image: "/images/eventposters/rex2025.jpg",
+    caption: "",
+    alt: "REX events from 2025",
+  },
+  {
+    image: "/images/eventposters/september.jpg",
+    caption: "",
+    alt: "List of September study breaks",
+  },
+  {
+    image: "/images/eventposters/stargazing.jpg",
+    caption: "",
+    alt: "Stargazing on the roof poster.",
+  },
+  {
+    image: "/images/eventposters/sunday.jpg",
+    caption: "Sundaes on a Sunday!",
+    alt: "Sundaes on a Sunday!",
+  },
+];

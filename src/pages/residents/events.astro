@@ -1,0 +1,21 @@
+---
+import ContentTile from "@components/baker/ContentTile.astro";
+import EventPosterCarousel from "@components/baker/EventPosterCarousel";
+import ResidentsLayout from "@components/baker/ResidentsLayout.astro";
+import { eventPosters } from "@lib/eventPosters";
+import { getEntry, render } from "astro:content";
+
+const entry = await getEntry("docs", "residents/events");
+if (!entry) {
+  throw new Error("Events content missing");
+}
+const { Content } = await render(entry);
+const { title, description } = entry.data;
+---
+
+<ResidentsLayout title={title} description={description}>
+  <ContentTile title={title}>
+    <Content />
+  </ContentTile>
+  <EventPosterCarousel posters={eventPosters} client:load />
+</ResidentsLayout>

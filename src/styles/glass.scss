@@ -1,0 +1,24 @@
+$baker-glass: #325294;
+
+.glass {
+  background-color: rgba($baker-glass, 0.55);
+  @apply backdrop-blur-lg backdrop-filter backdrop-saturate-100;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+
+  /* Avoid per-element opacity fades inside panels (causes halos on blur). */
+  :is(h1, h2, h3, h4, h5, h6, p, li, a, .content) {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+.glass-t {
+  background-color: rgba($baker-glass, 0.4);
+  @apply backdrop-blur backdrop-filter backdrop-saturate-100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.glass-t-borderless {
+  background-color: rgba($baker-glass, 0.4);
+  @apply backdrop-blur backdrop-filter backdrop-saturate-100;
+}

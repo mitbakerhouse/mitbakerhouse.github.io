@@ -1,0 +1,39 @@
+<script is:inline data-astro-rerun>
+  const defaultTheme = "dark";
+
+  function getTheme(defaultTheme) {
+    const stored = localStorage.getItem("theme");
+    if (stored === "light") {
+      return false;
+    }
+    if (stored === "dark") {
+      return true;
+    }
+    if (stored === "system") {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return defaultTheme === "dark";
+  }
+
+  function setTheme(darkMode) {
+    darkMode
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+
+    document.querySelectorAll("[data-theme-switcher]").forEach((el) => {
+      el.checked = darkMode;
+    });
+  }
+
+  setTheme(getTheme(defaultTheme));
+
+  document.addEventListener("astro:page-load", () => {
+    setTheme(getTheme(defaultTheme));
+    document.querySelectorAll("[data-theme-switcher]").forEach((el) => {
+      el.addEventListener("change", (e) => {
+        setTheme(e.target.checked);
+      });
+    });
+  });
+</script>
