@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import ResidentsSidebar from "@components/ResidentsSidebar.astro";
-import { pageBackgrounds } from "@lib/pageBackgrounds";
 
 interface Props {
   title?: string;
@@ -11,11 +10,7 @@ interface Props {
 const { title = "Residents", description } = Astro.props;
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  pageBackground={pageBackgrounds.residents}
->
+<BaseLayout title={title} description={description}>
   <section class="container py-6">
     <div class="flex flex-col gap-6 lg:flex-row lg:items-start">
       <aside class="w-full lg:w-1/4 shrink-0">

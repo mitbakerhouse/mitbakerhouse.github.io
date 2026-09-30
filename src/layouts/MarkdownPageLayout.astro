@@ -3,7 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import PageHeader from "@components/common/PageHeader.astro";
 import { markdownify } from "@lib/textConverter";
 import type { AboutEntry, TermsEntry } from "@/types";
-import { render } from "astro:content";
+import MarkdownBody from "@components/MarkdownBody.astro";
 
 interface Props {
   entry: AboutEntry | TermsEntry;
@@ -12,12 +12,9 @@ interface Props {
 
 const { entry, showPageHeader = false } = Astro.props;
 const { title, description } = entry.data;
-const pageBackground =
-  "image" in entry.data && entry.data.image ? entry.data.image.src : undefined;
-const { Content } = await render(entry);
 ---
 
-<BaseLayout title={title} description={description} pageBackground={pageBackground}>
+<BaseLayout title={title} description={description}>
   {showPageHeader && <PageHeader title={title} />}
   <section class={showPageHeader ? "section" : "section-sm"}>
     <div class="container">
@@ -26,7 +23,7 @@ const { Content } = await render(entry);
           class={`glass rounded-lg p-8 content intersect:animate-fadeUp opacity-0 intersect-no-queue ${showPageHeader ? "col-10" : "md:col-10 lg:col-7"}`}
         >
           {!showPageHeader && <h2 set:html={markdownify(title)} class="h3 mb-6" />}
-          <Content />
+          <MarkdownBody entry={entry} />
         </div>
       </div>
     </div>

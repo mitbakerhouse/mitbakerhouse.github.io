@@ -1,0 +1,31 @@
+---
+title: Facilities
+description: House operations and maintenance at Baker House
+draft: false
+---
+
+import { Image } from "astro:assets";
+import jonnolan from "@assets/houseteam/jonnolan.jpg";
+
+<GlassTile>
+  <div class="not-prose flex flex-col gap-6 md:flex-row md:items-start">
+    <Image
+      class="h-auto w-full shrink-0 rounded-lg md:max-w-[30%]"
+      src={jonnolan}
+      alt="Jon Nolan, House Operations Manager"
+      width={400}
+      height={400}
+      loading="lazy"
+    />
+    <div class="min-w-0 flex-1">
+      <h3 class="h4 mb-4 border-none">House Manager</h3>
+      <p>
+        The House Operations Manager is responsible for providing a clean, safe, and
+        secure living environment. Jon Nolan has over 21 years experience at MIT. Any
+        maintenance requests, please go to{" "}
+        <a href="https://atlas.mit.edu/">Atlas</a> or e-mail him at{" "}
+        <a href="mailto:jnolan@mit.edu">jnolan@mit.edu</a>.
+      </p>
+    </div>
+  </div>
+</GlassTile>

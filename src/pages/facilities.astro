@@ -1,37 +1,12 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
-import ContentTile from "@components/ContentTile.astro";
-import { getEntry, render } from "astro:content";
-import { pageBackgrounds } from "@lib/pageBackgrounds";
-import { Image } from "astro:assets";
-import jonnolan from "@assets/houseteam/jonnolan.jpg";
+import StackedMarkdownLayout from "@layouts/StackedMarkdownLayout.astro";
+import { getEntry } from "astro:content";
 
 const entry = await getEntry("docs", "facilities");
 if (!entry) {
   throw new Error("Facilities content missing");
 }
-const { Content } = await render(entry);
 const { title, description } = entry.data;
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  pageBackground={pageBackgrounds.facilities}
->
-  <section class="container py-6 max-w-3xl">
-    <ContentTile title="House Manager">
-      <div slot="media" class="shrink-0 md:max-w-[30%]">
-        <Image
-          class="rounded-lg w-full h-auto"
-          src={jonnolan}
-          alt="Jon Nolan, House Operations Manager"
-          width={400}
-          height={400}
-          loading="lazy"
-        />
-      </div>
-      <Content />
-    </ContentTile>
-  </section>
-</BaseLayout>
+<StackedMarkdownLayout entry={entry} title={title} description={description} />

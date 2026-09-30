@@ -28,7 +28,7 @@ const isActive = (url: string) => {
   transition:persist
   class={`container glass py-2 z-30 mb-4 lg:mt-4 lg:rounded-lg ${stickyHeader && "sticky top-0"}`}
 >
-  <nav class="relative flex flex-wrap items-center justify-between">
+  <nav class="relative flex flex-wrap items-center">
     <!-- navbar toggler -->
     <input id="nav-toggle" type="checkbox" class="hidden" />
     <label
@@ -49,7 +49,7 @@ const isActive = (url: string) => {
     <!-- /navbar toggler -->
     <ul
       id="nav-menu"
-      class="text-center lg:text-left order-3 hidden w-full pb-6 md:order-1 md:flex md:w-auto md:space-x-2 md:pb-0 lg:space-x-4"
+      class="text-center order-3 hidden w-full flex-col pb-6 md:order-1 md:flex md:w-auto md:flex-1 md:flex-row md:justify-evenly md:pb-0"
     >
       {
         menu.map((item) => (
@@ -66,7 +66,7 @@ const isActive = (url: string) => {
         ))
       }
     </ul>
-    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+    <div class="order-1 ml-auto flex shrink-0 items-center md:order-2">
       <a
         class="mr-4 inline-block border-border text-xl text-txt-p dark:border-darkmode-border dark:text-darkmode-txt-p"
         href="/search"

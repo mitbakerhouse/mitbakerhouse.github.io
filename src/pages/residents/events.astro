@@ -1,21 +1,21 @@
 ---
-import ContentTile from "@components/ContentTile.astro";
+import StackedMarkdownLayout from "@layouts/StackedMarkdownLayout.astro";
 import EventPosterCarousel from "@components/EventPosterCarousel";
-import ResidentsLayout from "@layouts/ResidentsLayout.astro";
 import { eventPosters } from "@lib/eventPosters";
-import { getEntry, render } from "astro:content";
+import { getEntry } from "astro:content";
 
 const entry = await getEntry("docs", "residents/events");
 if (!entry) {
   throw new Error("Events content missing");
 }
-const { Content } = await render(entry);
 const { title, description } = entry.data;
 ---
 
-<ResidentsLayout title={title} description={description}>
-  <ContentTile title={title}>
-    <Content />
-  </ContentTile>
-  <EventPosterCarousel posters={eventPosters} client:load />
-</ResidentsLayout>
+<StackedMarkdownLayout
+  entry={entry}
+  title={title}
+  description={description}
+  residents
+>
+  <EventPosterCarousel slot="after" posters={eventPosters} client:load />
+</StackedMarkdownLayout>

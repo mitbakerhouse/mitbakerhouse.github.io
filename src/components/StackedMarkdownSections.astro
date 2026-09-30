@@ -1,0 +1,39 @@
+---
+import MarkdownBody from "@components/MarkdownBody.astro";
+import { markdownify } from "@lib/textConverter";
+import type { CollectionEntry, CollectionKey } from "astro:content";
+
+interface Props {
+  entry: CollectionEntry<CollectionKey>;
+  title: string;
+  /** When true, tiles span the residents main column (no page container). */
+  residents?: boolean;
+}
+
+const { entry, title, residents = false } = Astro.props;
+const hasMarkdownBody = Boolean(entry.body?.trim());
+---
+
+<section class="section">
+  <div class:list={[!residents && "container"]}>
+    <div class="row justify-center">
+      <div class:list={["text-center", residents ? "w-full" : "lg:col-9"]}>
+        <div
+          class="glass rounded-lg px-8 py-10 intersect:animate-fadeUp opacity-0"
+        >
+          <h2 set:html={markdownify(title)} class="h3 mb-0" />
+        </div>
+      </div>
+    </div>
+    {
+      hasMarkdownBody && (
+        <div class="row justify-center mt-8">
+          <div class:list={[residents ? "w-full" : "lg:col-9"]}>
+            <MarkdownBody entry={entry} />
+          </div>
+        </div>
+      )
+    }
+    <slot name="after" />
+  </div>
+</section>

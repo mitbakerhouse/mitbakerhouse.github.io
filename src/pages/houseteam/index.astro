@@ -4,12 +4,10 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import HouseteamTile from "@components/HouseteamTile.astro";
 import { getEntries } from "@lib/contentParser";
 import { sortHouseteam } from "@lib/houseteamOrder";
-import { pageBackgrounds } from "@lib/pageBackgrounds";
 import { getIndex } from "@lib/contentParser";
-import { render } from "astro:content";
+import MarkdownBody from "@components/MarkdownBody.astro";
 
 const houseteamIndex = await getIndex("houseteam");
-const { Content: Intro } = await render(houseteamIndex);
 const entries = (await getEntries("houseteam")) as HouseteamEntry[];
 const houseteam = sortHouseteam(entries);
 ---
@@ -17,11 +15,10 @@ const houseteam = sortHouseteam(entries);
 <BaseLayout
   title={houseteamIndex.data.title}
   description={houseteamIndex.data.description}
-  pageBackground={pageBackgrounds.houseteam}
 >
   <section class="container py-6 max-w-4xl">
     <div class="glass rounded-lg p-4 mb-6 text-center intersect:animate-fadeDown opacity-0">
-      <Intro />
+      <MarkdownBody entry={houseteamIndex} />
     </div>
     {houseteam.map((entry) => <HouseteamTile entry={entry} />)}
   </section>

@@ -32,7 +32,16 @@ export default defineConfig({
       applyBaseStyles: false
     }
   }), AutoImport({
-    imports: ["@components/common/Button.astro", "@shortcodes/Accordion", "@shortcodes/Notice", "@shortcodes/Youtube", "@shortcodes/Tabs", "@shortcodes/Tab"]
+    imports: [
+      "@components/common/Button.astro",
+      "@components/GlassTile.astro",
+      "@components/LostStory.astro",
+      "@shortcodes/Accordion",
+      "@shortcodes/Notice",
+      "@shortcodes/Youtube",
+      "@shortcodes/Tabs",
+      "@shortcodes/Tab",
+    ]
   }), mdx()],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, {

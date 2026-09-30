@@ -1,4 +1,5 @@
 ---
 title: Stories
-description: Jane's stories
+description: Stories of Baker House, Baker Home
+image: "@assets/baker/home.jpg"
 ---

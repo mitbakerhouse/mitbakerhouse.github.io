@@ -3,7 +3,7 @@ title:
 description:
 image: "@assets/stories/.jpg"
 imageAlt:
-author:
+author: Full Name, 'XX
 date: YYYY-MM-DD
 draft: true
 ---

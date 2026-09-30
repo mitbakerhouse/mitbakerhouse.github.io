@@ -1,8 +1,8 @@
 ---
 import type { HouseteamEntry } from "@/types";
 import { Image } from "astro:assets";
-import { render } from "astro:content";
 import ContentTile from "@components/ContentTile.astro";
+import MarkdownBody from "@components/MarkdownBody.astro";
 
 interface Props {
   entry: HouseteamEntry;
@@ -10,7 +10,6 @@ interface Props {
 
 const { entry } = Astro.props;
 const { title, description, image, imageAlt } = entry.data;
-const { Content } = await render(entry);
 ---
 
 <ContentTile title={`${description} - ${title}`}>
@@ -28,5 +27,5 @@ const { Content } = await render(entry);
       </div>
     )
   }
-  <Content />
+  <MarkdownBody entry={entry} />
 </ContentTile>

@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from "astro:content";
+import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
 // May also need to update /src/types/index.d.ts when updating this file
@@ -66,8 +66,10 @@ const home = defineCollection({
     z.object({
       image: image().optional(),
       imageAlt: z.string().default(""),
-      title: z.string(),
-      content: z.string(),
+      titleImage: image().optional(),
+      titleImageAlt: z.string().optional(),
+      title: z.string().optional(),
+      content: z.string().optional(),
       button: z
         .object({
           label: z.string(),
@@ -84,7 +86,7 @@ const stories = defineCollection({
       date: z.date().optional(),
       image: image().optional(),
       imageAlt: z.string().default(""),
-      author: reference("houseteam").optional(),
+      author: z.string().optional(),
     }),
 });
 

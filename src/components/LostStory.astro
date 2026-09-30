@@ -1,0 +1,69 @@
+---
+import { getEntry } from "astro:content";
+import { markdownify } from "@lib/textConverter";
+
+export interface LostStoryEntry {
+  content: string;
+  author: string;
+}
+
+interface Props {
+  /** Inline story text and attribution. */
+  entry?: LostStoryEntry;
+  /** Stories collection entry id (e.g. `aalto_intent`). */
+  story?: string;
+  /** Omit the glass tile when the story sits inside another content panel. */
+  embedded?: boolean;
+  class?: string;
+}
+
+const {
+  entry: entryProp,
+  story,
+  embedded = false,
+  class: className = "",
+} = Astro.props;
+
+let entry = entryProp;
+
+if (!entry && story) {
+  const storyEntry = await getEntry("stories", story);
+  if (!storyEntry) {
+    throw new Error(`LostStory: no stories entry with id "${story}"`);
+  }
+
+  entry = {
+    content: storyEntry.body ?? "",
+    author: storyEntry.data.author ?? "Unknown",
+  };
+}
+
+if (!entry) {
+  throw new Error('LostStory: pass either an "entry" or "story" prop.');
+}
+
+const { content, author } = entry;
+---
+
+<article
+  class:list={[
+    "lost-story mb-6 intersect:animate-fadeUp opacity-0",
+    !embedded && "glass rounded-lg p-6 md:p-8",
+    embedded && "lost-story--embedded border-t border-border pt-8 dark:border-darkmode-border",
+    className,
+  ]}
+>
+  <div
+    class="lost-story__body text-justify italic"
+    set:html={markdownify(content)}
+  />
+  <p class="lost-story__attribution mt-6 mb-0 text-right not-italic">
+    - {author} from Lost Baker Stories
+  </p>
+</article>
+
+<style lang="scss">
+  .lost-story__body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ResidentsLayout from "@layouts/ResidentsLayout.astro";
+import StackedMarkdownSections from "@components/StackedMarkdownSections.astro";
+import type { CollectionEntry, CollectionKey } from "astro:content";
+
+interface Props {
+  entry: CollectionEntry<CollectionKey>;
+  title: string;
+  description?: string;
+  residents?: boolean;
+}
+
+const { entry, title, description, residents = false } = Astro.props;
+---
+
+{
+  residents ? (
+    <ResidentsLayout title={title} description={description}>
+      <StackedMarkdownSections entry={entry} title={title} residents>
+        <slot name="after" slot="after" />
+      </StackedMarkdownSections>
+    </ResidentsLayout>
+  ) : (
+    <BaseLayout title={title} description={description}>
+      <StackedMarkdownSections entry={entry} title={title}>
+        <slot name="after" slot="after" />
+      </StackedMarkdownSections>
+    </BaseLayout>
+  )
+}

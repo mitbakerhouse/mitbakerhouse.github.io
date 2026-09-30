@@ -1,0 +1,50 @@
+---
+import LostStory from "@components/LostStory.astro";
+import { markdownify } from "@lib/textConverter";
+import {
+  hasLostStoryTags,
+  isMdxEntry,
+  parseLostStorySegments,
+} from "@lib/lostStoryMarkdown";
+import { render, type CollectionEntry, type CollectionKey } from "astro:content";
+
+interface Props {
+  entry: CollectionEntry<CollectionKey>;
+  class?: string;
+}
+
+const { entry, class: className = "" } = Astro.props;
+
+const body = entry.body ?? "";
+const embedLostStoriesInMarkdown =
+  !isMdxEntry(entry) && hasLostStoryTags(body);
+
+let Content: Awaited<ReturnType<typeof render>>["Content"] | undefined;
+if (!embedLostStoriesInMarkdown) {
+  ({ Content } = await render(entry));
+}
+
+const segments = embedLostStoriesInMarkdown
+  ? parseLostStorySegments(body)
+  : [];
+---
+
+{
+  embedLostStoriesInMarkdown ? (
+    <div class:list={className}>
+      {segments.map((segment) =>
+        segment.type === "lostStory" ? (
+          <LostStory story={segment.story} />
+        ) : (
+          <div class="content" set:html={markdownify(segment.content)} />
+        ),
+      )}
+    </div>
+  ) : (
+    Content && (
+      <div class:list={className}>
+        <Content />
+      </div>
+    )
+  )
+}

@@ -1,6 +1,12 @@
 ---
-import DocTilePage from "@layouts/DocTilePage.astro";
-import { pageBackgrounds } from "@lib/pageBackgrounds";
+import StackedMarkdownLayout from "@layouts/StackedMarkdownLayout.astro";
+import { getEntry } from "astro:content";
+
+const entry = await getEntry("docs", "tours");
+if (!entry) {
+  throw new Error("Tours content missing");
+}
+const { title, description } = entry.data;
 ---
 
-<DocTilePage docId="tours" pageBackground={pageBackgrounds.tours} />
+<StackedMarkdownLayout entry={entry} title={title} description={description} />

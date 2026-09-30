@@ -1,38 +1,17 @@
 ---
-import ContentTile from "@components/ContentTile.astro";
-import ResidentsLayout from "@layouts/ResidentsLayout.astro";
-import { getEntry, render } from "astro:content";
+import StackedMarkdownLayout from "@layouts/StackedMarkdownLayout.astro";
+import { getEntry } from "astro:content";
 
-const indexEntry = await getEntry("docs", "residents/-index");
-if (!indexEntry) {
+const entry = await getEntry("docs", "residents/-index");
+if (!entry) {
   throw new Error("Residents content missing");
 }
-const { description } = indexEntry.data;
-
-const sectionIds = [
-  "residents/guest-list",
-  "residents/baker-exec",
-  "residents/rpms",
-] as const;
-
-const sections = await Promise.all(
-  sectionIds.map(async (id) => {
-    const entry = await getEntry("docs", id);
-    if (!entry) {
-      throw new Error(`Residents section missing: ${id}`);
-    }
-    const { Content } = await render(entry);
-    return { title: entry.data.title, Content };
-  })
-);
+const { title, description } = entry.data;
 ---
 
-<ResidentsLayout description={description}>
-  {
-    sections.map(({ title, Content }) => (
-      <ContentTile title={title}>
-        <Content />
-      </ContentTile>
-    ))
-  }
-</ResidentsLayout>
+<StackedMarkdownLayout
+  entry={entry}
+  title={title}
+  description={description}
+  residents
+/>

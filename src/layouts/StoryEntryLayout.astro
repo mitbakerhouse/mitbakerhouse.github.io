@@ -4,8 +4,8 @@ import Pagination from "@components/common/Pagination.astro";
 import Share from "@components/common/Share.astro";
 import { plainify } from "@lib/textConverter";
 import type { StoriesEntry } from "@/types";
-import { render } from "astro:content";
 import EntryHeader from "@components/common/EntryHeader.astro";
+import MarkdownBody from "@components/MarkdownBody.astro";
 
 interface Props {
   entry: StoriesEntry;
@@ -16,8 +16,6 @@ interface Props {
 
 const { entry, pageIDs, pageIndex, pageCount }: Props = Astro.props;
 const { title, description, autodescription, image } = entry.data;
-const { Content } = await render(entry);
-
 const descriptionLength = 200;
 
 const entryDescription =
@@ -33,7 +31,7 @@ const entryDescription =
           <EntryHeader entry={entry} showImage showAuthor showDate />
         </section>
         <section class="content mb-4 glass px-4 rounded-lg">
-          <Content />
+          <MarkdownBody entry={entry} />
         </section>
       </article>
     </div>
