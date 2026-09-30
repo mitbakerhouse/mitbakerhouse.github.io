@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ContentTile from "@components/ContentTile.astro";
+import ResidentsLayout from "@layouts/ResidentsLayout.astro";
+import { getEntry, render } from "astro:content";
+
+interface Props {
+  docId: string;
+  pageBackground?: string;
+  residents?: boolean;
+}
+
+const { docId, pageBackground, residents = false } = Astro.props;
+
+const entry = await getEntry("docs", docId);
+if (!entry) {
+  throw new Error(`Docs content missing: ${docId}`);
+}
+const { Content } = await render(entry);
+const { title, description } = entry.data;
+---
+
+{
+  residents ? (
+    <ResidentsLayout title={title} description={description}>
+      <ContentTile title={title}>
+        <Content />
+      </ContentTile>
+    </ResidentsLayout>
+  ) : (
+    <BaseLayout title={title} description={description} pageBackground={pageBackground}>
+      <section class="container py-6 max-w-3xl">
+        <ContentTile title={title}>
+          <Content />
+        </ContentTile>
+      </section>
+    </BaseLayout>
+  )
+}

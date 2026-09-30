@@ -1,0 +1,32 @@
+---
+import type { StoriesEntry } from "@/types";
+import { sortByDate } from "@lib/sortFunctions";
+import StoryEntryLayout from "@layouts/StoryEntryLayout.astro";
+import { getEntries } from "@lib/contentParser";
+
+export async function getStaticPaths() {
+  const entries = (await getEntries("stories", sortByDate)) as StoriesEntry[];
+  const pageIDs: string[] = entries.map((entry) => entry.id);
+  const pageCount = pageIDs.length;
+
+  const paths = entries.map((entry) => {
+    const pageIndex = pageIDs.indexOf(entry.id);
+    return {
+      params: {
+        entry: entry.id,
+      },
+      props: { entry, pageIDs, pageIndex, pageCount },
+    };
+  });
+  return paths;
+}
+
+const { entry, pageIDs, pageIndex, pageCount } = Astro.props;
+---
+
+<StoryEntryLayout
+  entry={entry}
+  pageIDs={pageIDs}
+  pageIndex={pageIndex}
+  pageCount={pageCount}
+/>

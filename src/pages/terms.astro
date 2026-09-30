@@ -1,9 +1,9 @@
 ---
-import EntryLayout from "@components/terms/EntryLayout.astro";
-import { getIndex } from "@lib/contentParser";
 import type { TermsEntry } from "@/types";
+import MarkdownPageLayout from "@layouts/MarkdownPageLayout.astro";
+import { getIndex } from "@lib/contentParser";
 
-const entry = await getIndex("terms") as TermsEntry;
+const entry = (await getIndex("terms")) as TermsEntry;
 ---
 
-<EntryLayout entry={entry} />
+<MarkdownPageLayout entry={entry} showPageHeader />

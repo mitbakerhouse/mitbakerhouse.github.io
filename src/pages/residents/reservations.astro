@@ -1,18 +1,5 @@
 ---
-import ContentTile from "@components/baker/ContentTile.astro";
-import ResidentsLayout from "@components/baker/ResidentsLayout.astro";
-import { getEntry, render } from "astro:content";
-
-const entry = await getEntry("docs", "residents/reservations");
-if (!entry) {
-  throw new Error("Reservations content missing");
-}
-const { Content } = await render(entry);
-const { title, description } = entry.data;
+import DocTilePage from "@layouts/DocTilePage.astro";
 ---
 
-<ResidentsLayout title={title} description={description}>
-  <ContentTile title={title}>
-    <Content />
-  </ContentTile>
-</ResidentsLayout>
+<DocTilePage docId="residents/reservations" residents />

@@ -1,0 +1,34 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PageHeader from "@components/common/PageHeader.astro";
+import { markdownify } from "@lib/textConverter";
+import type { AboutEntry, TermsEntry } from "@/types";
+import { render } from "astro:content";
+
+interface Props {
+  entry: AboutEntry | TermsEntry;
+  showPageHeader?: boolean;
+}
+
+const { entry, showPageHeader = false } = Astro.props;
+const { title, description } = entry.data;
+const pageBackground =
+  "image" in entry.data && entry.data.image ? entry.data.image.src : undefined;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={title} description={description} pageBackground={pageBackground}>
+  {showPageHeader && <PageHeader title={title} />}
+  <section class={showPageHeader ? "section" : "section-sm"}>
+    <div class="container">
+      <div class="row justify-center">
+        <div
+          class={`glass rounded-lg p-8 content intersect:animate-fadeUp opacity-0 intersect-no-queue ${showPageHeader ? "col-10" : "md:col-10 lg:col-7"}`}
+        >
+          {!showPageHeader && <h2 set:html={markdownify(title)} class="h3 mb-6" />}
+          <Content />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

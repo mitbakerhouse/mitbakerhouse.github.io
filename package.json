@@ -1,8 +1,8 @@
 {
-  "name": "Astrogon",
+  "name": "mitbakerhouse",
   "version": "1.0.0",
-  "description": "Template.",
-  "author": "Jane Doe",
+  "description": "Baker House at MIT website.",
+  "author": "Baker House WebMaster",
   "license": "MIT",
   "packageManager": "npm@10.8.2",
   "scripts": {

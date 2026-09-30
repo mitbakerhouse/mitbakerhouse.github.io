@@ -1,0 +1,32 @@
+---
+import type { HouseteamEntry } from "@/types";
+import { Image } from "astro:assets";
+import { render } from "astro:content";
+import ContentTile from "@components/ContentTile.astro";
+
+interface Props {
+  entry: HouseteamEntry;
+}
+
+const { entry } = Astro.props;
+const { title, description, image, imageAlt } = entry.data;
+const { Content } = await render(entry);
+---
+
+<ContentTile title={`${description} - ${title}`}>
+  {
+    image && (
+      <div slot="media" class="shrink-0 md:max-w-[30%]">
+        <Image
+          class="rounded-lg w-full h-auto"
+          src={image}
+          alt={imageAlt || title}
+          width={400}
+          height={400}
+          loading="lazy"
+        />
+      </div>
+    )
+  }
+  <Content />
+</ContentTile>

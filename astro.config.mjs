@@ -16,6 +16,13 @@ export default defineConfig({
   trailingSlash: "ignore",
   redirects: {
     "/authors": "/houseteam",
+    "/poetry": "/stories",
+    "/docs": "/residents",
+    "/docs/facilities": "/facilities",
+    "/docs/tours": "/tours",
+    "/docs/residents": "/residents",
+    "/docs/residents/events": "/residents/events",
+    "/docs/residents/reservations": "/residents/reservations",
   },
   prefetch: {
     prefetchAll: true

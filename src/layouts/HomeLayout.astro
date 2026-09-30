@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { markdownify } from "@lib/textConverter";
+import Button from "@components/common/Button.astro";
+import type { HomeEntry } from "@/types";
+
+interface Props {
+  entry: HomeEntry;
+}
+
+const { entry } = Astro.props;
+const { title, content, button, image } = entry.data;
+---
+
+<BaseLayout pageBackground={image?.src}>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="text-center lg:col-6">
+          <div class="glass rounded-lg px-8 py-10 intersect:animate-fadeUp opacity-0">
+            <h1 set:html={markdownify(title)} class="mb-4" />
+            <p set:html={markdownify(content)} class="mb-8" />
+            {
+              button && (
+                <Button
+                  label={button.label}
+                  link={button.link}
+                  newtab
+                  hoverInvert
+                  color=""
+                />
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

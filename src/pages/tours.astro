@@ -1,25 +1,6 @@
 ---
-import BaseLayout from "@components/base/BaseLayout.astro";
-import ContentTile from "@components/baker/ContentTile.astro";
-import { getEntry, render } from "astro:content";
+import DocTilePage from "@layouts/DocTilePage.astro";
 import { pageBackgrounds } from "@lib/pageBackgrounds";
-
-const entry = await getEntry("docs", "tours");
-if (!entry) {
-  throw new Error("Tours content missing");
-}
-const { Content } = await render(entry);
-const { title, description } = entry.data;
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  pageBackground={pageBackgrounds.tours}
->
-  <section class="container py-6 max-w-3xl">
-    <ContentTile title={title}>
-      <Content />
-    </ContentTile>
-  </section>
-</BaseLayout>
+<DocTilePage docId="tours" pageBackground={pageBackgrounds.tours} />

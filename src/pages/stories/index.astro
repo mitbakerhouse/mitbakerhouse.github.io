@@ -1,0 +1,11 @@
+---
+import StoriesIndexLayout from "@layouts/StoriesIndexLayout.astro";
+import { getIndex, getEntries } from "@lib/contentParser";
+import { sortByDate } from "@lib/sortFunctions";
+import type { StoriesEntry } from "@/types";
+
+const entryIndex = (await getIndex("stories")) as StoriesEntry;
+const entries = (await getEntries("stories", sortByDate)) as StoriesEntry[];
+---
+
+<StoriesIndexLayout entryIndex={entryIndex} entries={entries} />

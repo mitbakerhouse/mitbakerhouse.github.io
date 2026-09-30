@@ -1,17 +1,14 @@
 ---
 import type { SearchableEntry } from "@/types";
-import EntryLayout from "@components/search/EntryLayout.astro";
+import SearchLayout from "@layouts/SearchLayout.astro";
 import { getEntriesBatch } from "@lib/contentParser";
 import type { CollectionKey } from "astro:content";
 
 const searchableCollections = [
   "about",
-  "authors",
-  "blog",
+  "houseteam",
   "docs",
-  "poetry",
-  "portfolio",
-  "recipes",
+  "stories",
   "terms",
 ] as CollectionKey[];
 
@@ -22,4 +19,4 @@ const searchList = (await getEntriesBatch(
 )) as SearchableEntry[];
 ---
 
-<EntryLayout searchList={searchList} />
+<SearchLayout searchList={searchList} />

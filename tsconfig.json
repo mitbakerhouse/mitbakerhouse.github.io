@@ -15,7 +15,7 @@
     "paths": {
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
-      "@helpers/*": ["src/components/helpers/*"],
+      "@layouts/*": ["./src/layouts/*"],
       "@lib/*": ["src/lib/*"],
       "@shortcodes/*": ["src/components/common/shortcodes/*"],
       "@types/*": ["src/types/*"],

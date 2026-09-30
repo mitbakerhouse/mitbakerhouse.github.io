@@ -1,22 +1,22 @@
 ---
-import type { AuthorsEntry } from "@/types";
-import BaseLayout from "@components/base/BaseLayout.astro";
-import HouseteamTile from "@components/baker/HouseteamTile.astro";
+import type { HouseteamEntry } from "@/types";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HouseteamTile from "@components/HouseteamTile.astro";
 import { getEntries } from "@lib/contentParser";
 import { sortHouseteam } from "@lib/houseteamOrder";
 import { pageBackgrounds } from "@lib/pageBackgrounds";
 import { getIndex } from "@lib/contentParser";
 import { render } from "astro:content";
 
-const authorIndex = await getIndex("authors");
-const { Content: Intro } = await render(authorIndex);
-const entries = (await getEntries("authors")) as AuthorsEntry[];
+const houseteamIndex = await getIndex("houseteam");
+const { Content: Intro } = await render(houseteamIndex);
+const entries = (await getEntries("houseteam")) as HouseteamEntry[];
 const houseteam = sortHouseteam(entries);
 ---
 
 <BaseLayout
-  title={authorIndex.data.title}
-  description={authorIndex.data.description}
+  title={houseteamIndex.data.title}
+  description={houseteamIndex.data.description}
   pageBackground={pageBackgrounds.houseteam}
 >
   <section class="container py-6 max-w-4xl">
