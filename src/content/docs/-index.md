@@ -16,4 +16,4 @@ Welcome to the Baker House residents section. Use the links below for policies, 
 - [Reservations](/residents/reservations)
 - [Facilities](/facilities)
 - [Tours](/tours)
-- [Espresso](/espresso)
+- [Espresso](/residents/espresso)

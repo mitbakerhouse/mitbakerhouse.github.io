@@ -1,0 +1,17 @@
+---
+import StackedMarkdownLayout from "@layouts/StackedMarkdownLayout.astro";
+import { getEntry } from "astro:content";
+
+const entry = await getEntry("docs", "residents/espresso");
+if (!entry) {
+  throw new Error("Espresso content missing");
+}
+const { title, description } = entry.data;
+---
+
+<StackedMarkdownLayout
+  entry={entry}
+  title={title}
+  description={description}
+  residents
+/>
